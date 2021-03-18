@@ -1,3 +1,4 @@
+//Node class for LinkedList
 class LLNode{
     int value;
     LLNode next;
@@ -7,14 +8,19 @@ class LLNode{
     }
 }
 
-
+//LinkedList Class
 public class LinkedList {
     private LLNode head;
     private int size;
+    //Constructor
     LinkedList(){
         head=null;
         size=0;
     }
+    
+    /*Insert 
+     * inserts x at the end of the linked list
+     */
     public void insert(int x){
         if(head == null){
             head = new LLNode(x);
@@ -27,13 +33,23 @@ public class LinkedList {
         }
         size++;
     }
+    
+    /*insertAtHead 
+     * inserts in the beginning of the list
+     * 
+     */  
+    
     public void insertAtHead(int x) {
     	LLNode temp = new LLNode(x);
     	temp.next = head;
     	head = temp;
     	size++;
     }
-    
+    /*reverseList
+     * 
+     * Reverses the linkedList
+     * 
+     */
     public void reverseList() {
     	LLNode prev,next,temp;
     	prev=next=null;
@@ -55,7 +71,10 @@ public class LinkedList {
     	
     	return null;
     }
-    
+    /*printList
+     * 
+     * prints the linkedlist with sep string betwee two nodes
+     */
     
     public void printList(String sep){
         LLNode temp=head;
@@ -71,6 +90,12 @@ public class LinkedList {
     public int size() {
     	return size;
     }
+    
+    /*Delete
+     * 
+     * deletes int x from  the list 
+     * 
+     */
     
     public void delete(int x) {
     	

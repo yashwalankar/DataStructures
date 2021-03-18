@@ -3,7 +3,7 @@ public class driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Linked list test");
+		System.out.println("Linked list test...");
         LinkedList list = new LinkedList();
         list.insert(3);
         list.insert(77);
@@ -13,13 +13,11 @@ public class driver {
         list.insert(23);
         list.insertAtHead(44);
         list.printList(" --> ");
-        System.out.println("Deleting 10");
+        System.out.println("Deleting 10...");
         list.delete(10);
         list.printList(" --> ");
-        
-        
         System.out.println("Size = "+list.size());
-        System.out.println("Reversing the list");
+        System.out.println("Reversing the list...");
         list.reverseList();
         list.printList(" --> ");
         

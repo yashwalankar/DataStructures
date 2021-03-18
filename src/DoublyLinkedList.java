@@ -1,3 +1,4 @@
+//Node class for doubly linked list
 class DLLNode{
     int value;
     DLLNode next;
@@ -11,10 +12,19 @@ class DLLNode{
 public class DoublyLinkedList {
 	DLLNode head;
 	DLLNode tail;
+	int size;
+	//Constructor 
 	DoublyLinkedList(){
 		head = null;
 		tail = null;
+		size=0;
 	}
+	/*Insert Function 
+	 * 
+	 * INPUT : int x (input value) 
+	 * 		   String "Head" to add to the front and "tail" to add to the end
+	 * 
+	 */
 	public void insert(int x,String headORtail) {
 		if(head == null) {
 			DLLNode temp = new DLLNode(x);
@@ -22,6 +32,7 @@ public class DoublyLinkedList {
 			tail = temp;
 			head.prev =null;
 			tail.next=null;
+			size++;
 			return;
 		}
 		if(headORtail.equalsIgnoreCase("head")) {
@@ -31,6 +42,7 @@ public class DoublyLinkedList {
 			if(head!=null)
 				head.prev=temp;
 			head =temp;
+			
 		}
 		else if(headORtail.equalsIgnoreCase("tail")) {
 			DLLNode temp = new DLLNode(x);
@@ -47,9 +59,24 @@ public class DoublyLinkedList {
 			tail =temp;
 			tail.next =null;*/
 		}
-		
+		size++;
 		
 	}
+	
+	public int size() {
+		return size;
+	}
+	
+	
+	
+	/* Print 
+	 * prints the content of the linked list head to tail 
+	 * 
+	 * String sep is the Separator between two nodes while printing 
+	 * 
+	 * 
+	 */
+	
 	public void print(String sep) {
 		DLLNode temp = head;
 		System.out.print("HEAD" + sep);
@@ -61,6 +88,14 @@ public class DoublyLinkedList {
 		System.out.println();
 		
 	}
+	
+	/* Print Reverse 
+	 * prints the content of the linked list tail to head 
+	 * 
+	 * String sep is the Separator between two nodes while printing 
+	 * 
+	 * 
+	 */
 	public void printReverse(String sep) {
 		DLLNode temp = tail;
 		System.out.print("TAIL" +sep);
