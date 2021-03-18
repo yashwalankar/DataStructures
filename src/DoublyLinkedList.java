@@ -110,33 +110,35 @@ public class DoublyLinkedList {
 	
 	/*Deleting a node 
 	 * 
+	 * deletes node with value x 
 	 */
 	public void delete(int x) {
 		DLLNode temp =head;
-		DLLNode nodebehind =null;
 		
+		
+		//if value in head
 		if(head.value == x) {
 			head.next.prev =null;
 			head = head.next;	
 			return;
 		}
+		//If value in tail 
 		if(tail.value == x) {
 			tail.prev.next = null;
 			tail =tail.prev;
+			return;
 		}
 		
-		
-		
+		//else
 		while(temp.next!=null) {
 			if(temp.value == x) {
-				System.out.println(temp.value);
 				temp.prev.next = temp.next;
 				temp.next.prev = temp.prev;
 				
 				break;
 			}	
 			temp =temp.next;
-			nodebehind =temp;
+			
 		}
 	}
 	
