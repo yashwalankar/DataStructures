@@ -34,6 +34,11 @@ public class driver {
         doublylist.print(" <-> ");
         doublylist.printReverse(" <-> ");
         
+        doublylist.delete(3);
+        doublylist.print(" <-> ");
+        doublylist.printReverse(" <-> ");
+        
+        
 
 	}
 
