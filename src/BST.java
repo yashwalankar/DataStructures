@@ -74,5 +74,15 @@ public class BST {
 		return null;
 	}
 	
-
+	
+	/*
+	 * public void delete(int x) { BSTNode toDelete = searchHelper(root,x);
+	 * if(toDelete == null) { System.out.println("value not in Tree"); return; }
+	 * //Else //Case 1: node is a leaf (no children) if(toDelete.rightChild == null
+	 * && toDelete.leftChild == null) {
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
 }
