@@ -6,21 +6,20 @@ public class driver {
 		System.out.println("Linked list test...");
         LinkedList list = new LinkedList();
         list.insert(3);
-        list.insert(77);
-        list.insert(21);
+     //   list.insert(77);
+     //   list.insert(21);
         list.insert(10);
-        list.insert(12);
-        list.insert(23);
-        list.insertAtHead(44);
+       // list.insert(12);
+      //  list.insert(23);
+     //   list.insertAtHead(44);
         list.printList(" --> ");
         System.out.println("Deleting 10...");
-        list.delete(10);
+    //    list.delete(10);
         list.printList(" --> ");
         System.out.println("Size = "+list.size());
         System.out.println("Reversing the list...");
         list.reverseList();
         list.printList(" --> ");
-        
         
         
         DoublyLinkedList doublylist = new DoublyLinkedList();
@@ -38,8 +37,16 @@ public class driver {
         doublylist.print(" <-> ");
         doublylist.printReverse(" <-> ");
         
+        BST bstree = new BST();
+        bstree.insert(12);
+        bstree.insert(1);
+        bstree.insert(2);
+        bstree.insert(3);
         
-
+        bstree.inOrder();
+        bstree.search(9);
+        
+       
 	}
 
 }

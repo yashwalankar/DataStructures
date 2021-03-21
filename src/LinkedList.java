@@ -10,7 +10,7 @@ class LLNode{
 
 //LinkedList Class
 public class LinkedList {
-    private LLNode head;
+    LLNode head;
     private int size;
     //Constructor
     LinkedList(){
